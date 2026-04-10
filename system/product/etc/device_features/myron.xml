@@ -104,7 +104,7 @@
     <integer name="smart_fps_value">120</integer>
     <integer-array name="fpsList">
         <item>120</item>
-	<item>90</item>
+		<item>90</item>
         <item>60</item>
     </integer-array>
     <!--whether the device supports screen key position swap-->
