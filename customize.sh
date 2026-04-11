@@ -4,8 +4,8 @@ DEVICECODE=$(getprop ro.product.device)
 ui_print "-"
 ui_print "- Your device's code is $DEVICECODE."
 
-MOD_TARGET_DIR="$MODPATH/system/product/etc/device_feature"
-SRC_FILE="/system/product/etc/device_feature/$DEVICECODE.xml"
+MOD_TARGET_DIR="$MODPATH/system/product/etc/device_features"
+SRC_FILE="/system/product/etc/device_features/$DEVICECODE.xml"
 
 if [ -f "$SRC_FILE" ]; then
     ui_print "- Extracting $DEVICECODE.xml"
