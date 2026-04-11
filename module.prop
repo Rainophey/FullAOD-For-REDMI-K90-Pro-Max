@@ -1,6 +1,6 @@
-id=myronFAOD
-name=FullAOD For K90 Pro Max
-version=1.2
-versionCode=3
+id=HyperOS_FAOD
+name=FullAOD For HyperOS
+version=2.0
+versionCode=4
 author=Rainophey
-description=Enable FullScreen AOD, 1HZ AOD, and other device features for K90 Pro MAX.
+description=Enable features disabled by default for HyperOS.
