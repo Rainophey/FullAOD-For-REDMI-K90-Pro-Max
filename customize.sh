@@ -41,6 +41,3 @@ change_bool() {
 }
 
 change_bool "support_aod_fullscreen" "true" "$TARGET_FILE" "whether the device supports aod fullscreen mode"
-
-ui_print "  "
-ui_print "- Everything done!"
