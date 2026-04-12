@@ -1,0 +1,28 @@
+name: Package Magisk Module
+
+on:
+  workflow_dispatch:      # 允许手动触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Prepare Module Zip
+        run: |
+          FILENAME="Featuresunlock_$(date +'%Y%m%d_%H%M').zip"
+          
+          # -r 递归，-9 最高压缩率，-j 某些情况下不保留多余目录层级（视你需求而定）
+          zip -r $FILENAME ./* -x ".git*" ".github*" "README.md"
+          
+          echo "ZIP_NAME=$FILENAME" >> $GITHUB_ENV
+
+      - name: Upload Artifact to CI
+        uses: actions/upload-artifact@v6
+        with:
+          name: ${{ env.ZIP_NAME }}
+          path: ${{ env.ZIP_NAME }}
+          retention-days: 90
