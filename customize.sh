@@ -1,4 +1,4 @@
-#1.Extra file
+#1.Extract file
 
 DEVICECODE=$(getprop ro.product.device)
 ui_print "-"
