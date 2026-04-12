@@ -14,7 +14,7 @@ jobs:
       - name: Upload Artifact to CI
         uses: actions/upload-artifact@v6
         with:
-          name: Featuresunlock_$(date +'%Y%m%d%H%M')
+          name: 816faod_$(date +'%Y%m%d_%H%M')
           path: |
             ./*
             !.git*
