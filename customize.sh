@@ -50,3 +50,6 @@ change_bool "support_aod_fullscreen" "true" "$TARGET_FILE" "whether the device s
 #Add some gallery feature unknown if effective
 change_bool "gallery_support_dolby" "true" "$TARGET_FILE" "gallery setting added"
 change_bool "gallery_support_print" "true" "$TARGET_FILE"
+
+#3.Done
+ui_log ""
