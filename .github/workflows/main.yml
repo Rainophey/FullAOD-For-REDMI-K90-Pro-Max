@@ -2,7 +2,7 @@ name: Package and Upload as Artifact
 
 on:
   push:
-    branches: [ dev ]
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
