@@ -9,24 +9,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v6
-
-      - name: Create zip archive
-        run: |
-          # 删除可能存在的旧压缩包
-          rm -f module.zip
-          # 将当前目录下所有内容（除 .git 和 .github/workflows 自身外）打包，
-          # 但为了保留目录结构，直接 zip -r 即可。压缩包内不会有额外的顶层文件夹。
-          # 排除 .git 目录，避免打包多余文件。
-          zip -r module.zip . -x ".git/*" ".github/workflows/*.yml" -x "*.zip"
-          # 上面排除了工作流文件本身，如果你希望包含它，去掉 -x ".github/workflows/*.yml"
-          # 更简洁的方式：只排除 .git
-          # zip -r module.zip . -x ".git/*"
 
       - name: Upload Artifact to CI
         uses: actions/upload-artifact@v6
         with:
           name: module-package
-          path: module.zip
-          retention-days: 90
+          path: |
+            customize.sh
+            module.prop
+            service.sh
+            system.prop
+            META-INF
+            
