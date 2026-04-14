@@ -1,6 +1,8 @@
 name: Package Magisk Module
 
 on:
+  push:
+    branches: [ "dev" ]
   workflow_dispatch:      # 允许手动触发
 
 jobs:
