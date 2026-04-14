@@ -35,13 +35,14 @@ ui_log ""
 ui_log "Your device's code is $DEVICECODE."
 
 if [ -f "$SRC_FILE" ]; then
-    ui_log "- Extracting $DEVICECODE.xml"
+    ui_log "Extracting $DEVICECODE.xml"
     mkdir -p "$MOD_TARGET_DIR"
     cp "$SRC_FILE" "$MOD_TARGET_DIR/$DEVICECODE.xml"
 else
     abort "! Error: Device feature file not found for $DEVICECODE"
 fi
-ui_log "- then..."
+ui_log ""
+ui_log "then..."
 
 #2.Change feature bool
 
